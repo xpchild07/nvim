@@ -15,35 +15,8 @@ packer.startup(
             use {
                 "yianwillis/vimcdoc",
             }
-            -- nvim-tree
-            use {
-                "kyazdani42/nvim-tree.lua",
-                requires = {
-                    "kyazdani42/nvim-web-devicons"
-                },
 
-                config = function()
-                    require("config/nvim-tree")
-                end
-            }
-            -- catppuccin 主题
-            use{
-                "catppuccin/nvim",
-                -- 因为 这个插件的名称是nvim，可能会冲突这里改个别名
-                as = "catppuccin",
-                config = function()
-                    -- 加载配置文件lua/config/cappuccin.lua
-                    require("config/catppuccin")
-                end
-            }
-            -- 状态栏 windline
-            use {
-                "windwp/windline.nvim",
-                config = function()
-                    -- 插件加载完成后自动运行 lua/conf/windline.lua 文件中的代码
-                    require("config/windline")
-                end
-            }
+
             -- 显示git信息 gitsigns
             use {
                 "lewis6991/gitsigns.nvim",
@@ -84,27 +57,11 @@ packer.startup(
                 end
             }
 
-            -- 自动保存 autosave
-            use{
-                "Pocco81/AutoSave.nvim",
-                config = function()
-                    require("config/autosave")
-                end
-            }
-
             -- 自动回复光标位置 lastplace
             use{
                 "ethanholz/nvim-lastplace",
                 config = function()
                     require("config/nvim-lastplace")
-                end
-            }
-
-            -- 会话管理 auto-session
-            use{
-                "rmagatti/auto-session",
-                config = function()
-                   require("config/auto-session")
                 end
             }
 
