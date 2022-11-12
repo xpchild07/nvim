@@ -16,5 +16,5 @@ sudo apt-get install ripgrep
 
 3. 安装该配置
 ```shell
-git clone https://github.com/aMonst/nvim-config.git ~/.config/nvim
+git clone https://github.com/xpchild07/nvim.git ~/.config/nvim
 ```
